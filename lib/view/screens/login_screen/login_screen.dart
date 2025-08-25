@@ -30,11 +30,8 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Please login with your credentials',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF6B7280),
-                ),
+                'Get your things done and take control of them.',
+                style: TextStyle(fontSize: 16, color: Color(0xFF6B7280)),
               ),
               const SizedBox(height: 40),
 
@@ -65,53 +62,104 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Checkbox(
+
+                        value: false, // You can use state management to change this value
+                        onChanged: (bool? value) {},
+                        activeColor: const Color(0xFF84c000),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4),
+
+                        ),
+
+                      ),
+                      const Text('Remember Me'),
+                    ],
+                  ),
+                ],
+              ),
+
+
+              Row(
+                children: const [
+                  Expanded(child: Divider(color: Color(0xFFD1D5DB))),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: Text(
+                      'OR',
+                      style: TextStyle(color: Color(0xFF6B7280)),
+                    ),
+                  ),
+                  Expanded(child: Divider(color: Color(0xFFD1D5DB))),
+                ],
+              ),
               const SizedBox(height: 24),
-              
-              GestureDetector(
-                onTap: 
-                () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Signup_Screen(),));
-                },
-                
-                
-                child: Container(
-                  child: Text('Sign Up',style: TextStyle(fontWeight: FontWeight.bold),),
+              // "Sign up" অংশ
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Don't have an account?",
+                      style: TextStyle(
+                        color: Color(0xFF6B7280),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Signup_Screen()),
+                        );
+                      },
+                      child: const Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: Color(0xFF84c000),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              
-              SizedBox(height: 18),
-
-
+              const SizedBox(height: 24),
               // Login button with loading state
-              Obx(() => SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF84c000),
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+              Obx(
+                () => SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF84c000),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
-                  ),
-                  onPressed: controller.loading.value
-                      ? null
-                      : () {
-                    controller.loginApi();
-                  },
-                  child: controller.loading.value
-                      ? const CircularProgressIndicator(
-                    color: Colors.white,
-                  )
-                      : const Text(
-                    "Login",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                    onPressed: controller.loading.value
+                        ? null
+                        : () {
+                            controller.loginApi();
+                          },
+                    child: controller.loading.value
+                        ? const CircularProgressIndicator(color: Colors.white)
+                        : const Text(
+                            "Login",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
                   ),
                 ),
-              )),
+              ),
             ],
           ),
         ),

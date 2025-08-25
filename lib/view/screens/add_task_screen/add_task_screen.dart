@@ -90,14 +90,37 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             const SizedBox(height: 20),
             _buildTextField(_descriptionController, "Task Description", maxLines: 5),
             const SizedBox(height: 40),
+            // SizedBox(
+            //   width: double.infinity,
+            //
+            //   child: ElevatedButton.icon(
+            //     onPressed: _addTask,
+            //     icon: const Icon(Icons.add),
+            //     label: const Text("Add Task"),
+            //   ),
+            // ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
                 onPressed: _addTask,
                 icon: const Icon(Icons.add),
                 label: const Text("Add Task"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF84c000), // <-- Change this color
+                  foregroundColor: Colors.white, // <-- Text & icon color
+                  padding: const EdgeInsets.symmetric(vertical: 16), // optional: button height
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10), // optional: rounded corners
+                  ),
+                ),
               ),
-            ),
+            )
+
+
+
+
+
+
           ],
         ),
       )),

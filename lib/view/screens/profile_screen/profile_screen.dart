@@ -77,7 +77,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             child: const CircleAvatar(
               radius: 50,
-              backgroundImage: NetworkImage('https://scontent.fdac41-1.fna.fbcdn.net/v/t39.30808-6/513907537_1467870827966579_4041861317215474499_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEDPGz4q6NhONZg62PgdANKg2kEYSeoj_uDaQRhJ6iP-8MKcbqzBd3lIR18O9i39pAkc92Ql41bFq-lt7Uk1LO2&_nc_ohc=-cCOFyDOfaIQ7kNvwG5C0Wv&_nc_oc=Adm1rLd6GGUYB1D0YJpFiNb0MF9oMiRXfbxtcegkcH-kxc19glaWMm33L2Ch0Q38M0s&_nc_zt=23&_nc_ht=scontent.fdac41-1.fna&_nc_gid=Hd_YsYsndhZkgG9cM-kTUg&oh=00_AfW4g3qdfB2mN1SNHaBOi6rwgdCqZTpv-zLEFESjQ67eMw&oe=68AAA3D3'), // এখানে আপনার প্রোফাইল ছবির URL দিন
+              backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/133763369?s=400&u=2eb844ab8d62bda196edebd9c0ecd4d2ea70a532&v=4'), // এখানে আপনার প্রোফাইল ছবির URL দিন
             ),
           ),
         ),

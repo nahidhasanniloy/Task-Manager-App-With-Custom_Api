@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
-
 import '../login_screen/login_screen.dart';
 import '../../../../task_model/task_model.dart';
 import '../add_task_screen/add_task_screen.dart';
@@ -150,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
             CircleAvatar(
               radius: 25,
               backgroundImage: NetworkImage(
-                  'https://scontent.fdac68-2.fna.fbcdn.net/v/t39.30808-6/513907537_1467870827966579_4041861317215474499_n.jpg'),
+                  'https://avatars.githubusercontent.com/u/133763369?s=400&u=2eb844ab8d62bda196edebd9c0ecd4d2ea70a532&v=4'),
             ),
             SizedBox(width: 12),
             Column(

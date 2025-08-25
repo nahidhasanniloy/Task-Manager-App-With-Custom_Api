@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen>
       duration: Duration(seconds: 7),
     )..repeat();
 
-    // ৩ সেকেন্ড পরে HomeScreen এ যাবে
+    // after 3 seconds, navigate to the next screen
     Timer(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
